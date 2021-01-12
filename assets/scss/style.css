@@ -1,0 +1,282 @@
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes wiggle {
+  from {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  to {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+}
+
+@keyframes wiggle {
+  from {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  to {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-color: #061523 white;
+  scrollbar-width: thin;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-animation: fade 0.5s ease-in-out;
+}
+
+body, .navbar {
+  background: url(../imgs/Endless-Constellation.svg);
+  /* background by SVGBackgrounds.com */
+}
+
+body, .arrow-down, .nav-link {
+  color: black;
+}
+
+#wrapper section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr calc(0.5rem + 2px) 1fr;
+      grid-template-columns: 1fr calc(0.5rem + 2px) 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "header vl content";
+}
+
+#wrapper section header {
+  text-align: right;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  text-transform: uppercase;
+}
+
+#wrapper section header h1 strong {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+#wrapper #intro {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0;
+}
+
+.vl {
+  border-left: 2px solid black;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: vl;
+  margin-right: 0.5rem;
+}
+
+.content {
+  padding: 2rem 5rem 5rem 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: content;
+}
+
+.content p {
+  font-size: 21px;
+}
+
+.content-white {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#intro {
+  height: 75vh;
+}
+
+.pfp-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 50%;
+}
+
+#profilepic {
+  color: white;
+  width: 100%;
+  border-radius: 50%;
+  border: solid;
+}
+
+.arrow-down {
+  font-size: 5rem;
+  font-weight: 100;
+  -webkit-animation: wiggle 1.5s infinite;
+  -webkit-animation-direction: alternate;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-down:hover {
+  color: black;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+.slide {
+  -webkit-animation: slide 1.2s ease;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 3rem;
+}
+
+#socialmedia a {
+  margin-left: 1rem;
+}
+
+#socialmedia a svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+#linkedin {
+  color: #0a58ca;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#linkedin:hover {
+  color: #034095;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#github {
+  color: #adb5bd;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#github:hover {
+  color: black;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+#mail {
+  color: #adb5bd;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#mail:hover {
+  color: red;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#facebook {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#facebook:hover {
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.icon-right {
+  margin-right: 2rem;
+}
+
+.icon-left {
+  margin-left: 2rem;
+}
+
+.dropdown-item:hover {
+  background-color: #1d81af;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+
+.dropdown-menu {
+  left: revert;
+  right: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+/*# sourceMappingURL=style.css.map */
