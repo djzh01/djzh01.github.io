@@ -36,6 +36,11 @@ body, .arrow-down, .nav-link {
     color: $textcolor;
 }
 
+.navbar{
+    padding: 0;
+    height: 7vh;
+}
+
 #wrapper section{
     display: grid;
     grid-template-columns: 1fr calc(0.5rem + 2px) 1fr;
@@ -86,6 +91,9 @@ body, .arrow-down, .nav-link {
     // }
 }
 
+#explore {
+    height: 18vh;
+}
 
 .pfp-wrapper {
     flex: 0 0 auto;
@@ -124,9 +132,24 @@ body, .arrow-down, .nav-link {
 
 }
 
+.classlist{
+    list-style: none;
+    padding: 0;
+
+    li p {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        background-color: rgba(197, 196, 196, 0.7);
+        
+        i {
+            font-size: 75%;
+        }
+    }
+}
+
 #socialmedia a {
     margin-left: 1rem;
-
+    margin-top: 2rem;
     svg{
         width: 3.5rem;
         height: 3.5rem;
